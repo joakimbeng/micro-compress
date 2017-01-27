@@ -1,6 +1,8 @@
 # micro-compress
 
-[![Build status][travis-image]][travis-url] [![NPM version][npm-image]][npm-url] [![XO code style][codestyle-image]][codestyle-url]
+[![Build status][travis-image]][travis-url]
+[![NPM version][npm-image]][npm-url]
+[![XO code style][codestyle-image]][codestyle-url]
 
 > Compression for HTTP microservices built with [Micro](https://github.com/zeit/micro)
 
