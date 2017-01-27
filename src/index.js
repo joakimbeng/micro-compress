@@ -1,14 +1,17 @@
-'use strict';
-const compression = require('compression');
+'use strict'
 
-module.exports = exports = function compress(opts, fn) {
+const compression = require('compression')
+
+function compress(opts, fn) {
 	if (!fn) {
-		fn = opts;
-		opts = {};
+		fn = opts
+		opts = {}
 	}
-	const compressionHandler = compression(opts);
+	const compressionHandler = compression(opts)
 	return (req, res) => {
 		return new Promise(resolve => compressionHandler(req, res, resolve))
-			.then(() => fn(req, res));
-	};
-};
+			.then(() => fn(req, res))
+	}
+}
+
+module.exports = exports = compress

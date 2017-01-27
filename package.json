@@ -4,7 +4,9 @@
   "description": "Compression for HTTP microservices built with Micro",
   "main": "src/index.js",
   "scripts": {
-    "test": "xo"
+    "report": "nyc report --reporter=html",
+    "pretest": "xo",
+    "test": "nyc ava"
   },
   "repository": {
     "type": "git",
@@ -31,13 +33,17 @@
   "xo": {
     "envs": [
       "node"
-    ]
+    ],
+    "semicolon": false
   },
   "devDependencies": {
-    "xo": "^0.16.0",
-    "standard-version": "^2.4.0"
+    "ava": "0.17.0",
+    "nyc": "10.1.2",
+    "standard-version": "4.0.0",
+    "supertest": "2.0.1",
+    "xo": "0.17.1"
   },
   "dependencies": {
-    "compression": "^1.6.2"
+    "compression": "1.6.2"
   }
 }
